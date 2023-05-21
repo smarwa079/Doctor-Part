@@ -1,0 +1,33 @@
+<div class="py-5">
+    <form class="assign_form" action="" method="post">
+
+        <!-- #region form title-->
+        <h1 class="text-center">Assign a subject to doctor</h1>
+        <!-- #endregion -->
+
+        <div class="my-3">
+            <label for="">Doctor ID</label>
+            <input type="text" class="form-control" name="Doctor" value="{{_id}}">
+        </div>
+
+        {{!-- subject --}}
+        <div class="mb-3">
+            <label for="" class="form-label">Subject Name</label>
+            <select name="Subject" id="" class="form-select">
+                {{#each subjects}}
+                <option value="{{_id}}">{{Sub_name}}</option>
+                {{/each}}
+            </select>
+        </div>
+
+        {{!-- assign button --}}
+        <button type="submit" class="btn btn-info assign_btn my-4">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z" fill="rgba(255,255,255,1)"></path>
+            </svg>
+            Assign
+        </button>
+
+    </form>
+
+</div>

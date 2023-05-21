@@ -1,0 +1,41 @@
+<form action="/admin/getAllDoctors/{{doctor._id}}?_method=PUT" method="post" class="addDoctorForm">
+
+    <!-- #region form title-->
+    <h1 class="text-center">Edit Doctor {{doctor.Doc_name}}</h1>
+    <!-- #endregion -->
+
+    {{!-- Doc_code --}}
+    <div class="my-3 inputDoctorData">
+        <label for="">Code</label>
+        <input type="number" class="form-control" name="Doc_code" value="{{doctor.Doc_code}}">
+    </div>
+
+    {{!-- Doc_name --}}
+    <div class="my-3 inputDoctorData">
+        <label for="">Name</label>
+        <input type="text" class="form-control" name="Doc_name" value="{{doctor.Doc_name}}">
+    </div>
+
+    {{!-- Doc_email --}}
+    <div class="my-3 inputDoctorData">
+        <label for="">Email</label>
+        <input type="text" class="form-control" name="Doc_email" value="{{doctor.Doc_email}}">
+    </div>
+
+    {{!-- Doc_password --}}
+    <div class="my-3 inputDoctorData">
+        <label for="">Password</label>
+        <input type="text" class="form-control" name="Doc_password" value="{{doctor.Doc_password}}">
+    </div>
+
+    {{!-- add button --}}
+    <div class="my-3">
+        <button type="submit" class="btn btn-info addDoctorbtn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z" fill="rgba(255,255,255,1)"></path>
+            </svg>
+            Update
+        </button>
+    </div>
+
+</form>
